@@ -1,0 +1,48 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        
+       <h3>Online JSON DELETE</h3>
+        <input type="button" value="REQUEST" onclick="JSONonlineDELETE()">
+        <hr>
+
+        <script>
+            var data = {
+                "id": 11,
+                "name": "Rohan Mittal",
+                "username": "rohanmittal",
+                "email": "rohan@engineer.com",
+                "address": {
+                    "street": "raheja  vihar",
+                    "suite": "hiranandani",
+                    "city": "mumbai",
+                    "zipcode": "400079",
+                    "geo": {
+                        "lat": "35353543",
+                        "lng": "42343232"
+                    }
+                },
+                "phone": "9999XXXXX",
+                "website": "rohanmittal.org",
+                "company": {
+                    "name": "CitiusTech",
+                    "catchPhrase": "Best HealthCare Technology Company",
+                    "bs": "PROUD"
+                }
+            }
+            
+            function JSONonlineDELETE(){
+                var url = "https://jsonplaceholder.typicode.com/users/?id=";
+                fetch(url+data.id, {
+                    method: "DELETE"
+                }).then((response) => {
+                    response.json().then((res) => {
+                        console.log("Record Deleted: ",res);
+                    });
+                }).catch(err => console.log(err));
+            }
+        </script>
+    </body>
+</html>

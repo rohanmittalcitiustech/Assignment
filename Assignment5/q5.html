@@ -1,0 +1,50 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        
+        <h3>Online JSON PUT</h3>
+        <input type="button" value="REQUEST" onclick="JSONonlinePUT()">
+        <hr>
+
+        <script>
+            var data = {
+                "id": 11,
+                "name": "rohan mittal",
+                "username": "rohanmittal",
+                "email": "rohan@citiustech.com",
+                "address": {
+                    "street": "raheja vihar ",
+                    "suite": "hiranandani",
+                    "city": "mumbai",
+                    "zipcode": "400079",
+                    "geo": {
+                        "lat": "4242423",
+                        "lng": "5555435"
+                    }
+                },
+                "phone": "99999XXXXX",
+                "website": "rohanmittal.org",
+                "company": {
+                    "name": "CitiusTech",
+                    "catchPhrase": "Best HealthCare Technology Company",
+                    "bs": "PROUD"
+                }
+            }
+            
+            function JSONonlinePUT(){
+                var url = "https://jsonplaceholder.typicode.com/users";
+                // PUT request
+                fetch(url+"/?id="+data.id, {
+                    method: "PUT",
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then( res => res.json()
+                                    .then(r => console.log("Record UPDATED!")));
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name":"Car",
+        "Brand":"Honda NSX",
+        "price":150000
+    },
+
+    {
+        "id":2,
+        "name":"Watch",
+        "Brand":"Grand Seiko",
+        "price":2000
+    },
+
+    {
+        "id":3,
+        "name":"Bike",
+        "Brand":"Honda CBR-1000",
+        "price":25000
+    },
+    {
+        "id":4,
+        "name":"Shoes",
+        "Brand":"Jordans",
+        "price":250
+    }
+]
