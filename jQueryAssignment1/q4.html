@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <style>
+        .error{
+            border: 8px solid red;
+            background-color: yellow;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('input').focusout(function(){
+                $('input').addClass('error');
+            });
+        
+        if(($('input').val()) > 10){
+            $('input').addClass('error');
+        }
+        else{
+            $('input').removeClass('error');
+        }
+    })
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1">
+    
+</body>
+</html>

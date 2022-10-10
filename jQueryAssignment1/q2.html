@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('textarea').addClass('selected');
+            });
+
+            $('#btn2').click(function(){
+                $('#div1').text('This is a text inside the first div element');
+            });
+
+            $('#btn3').click(function(){
+                $('input').val('HELLO');
+                $('textarea').val('HELLO');
+            });
+        })
+    </script>
+
+    <style>
+        .selected{
+
+            border: 2px solid red;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <input type="text" >
+    <input type="text" >
+    <textarea></textarea>
+    <textarea></textarea>
+
+    <button id="btn1">Apply Style to TextBoxes</button>
+    <button id="btn2">Apply Style to First Div</button>
+    <button id="btn3">Say Hello</button>
+
+</body>
+</html>
