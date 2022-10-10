@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <style>
+        #div3, #div2 {
+            padding: 10px;
+            text-align: center;
+            background-color: #c4cc57;
+            border: solid 1px #0a0808;
+        }
+
+        #div3 {
+            padding: 60px;
+            background-color: #9dce4e;
+            display: none;
+        }
+
+        #div4 {
+            padding: 15;
+            background-color: #9c3ca4;
+            display: none;
+
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+                $('#btn1').click(function () {
+            $('#div1').fadeIn('slow');
+        });
+
+        $('#div2').click(function () {
+            $('#div3').slideDown('slow');
+        });
+
+        $('#btn2').click(function () {
+            $('#div4').toggle('slow');
+        });  
+    });
+
+    </script>
+
+</head>
+<body>
+    <h1>fadeIn....</h1>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:rgb(107, 225, 240);      padding: 20px;">I am
+        a hidden secret</div>
+    <button id="btn1">click to see</button><br><br>
+
+    <h1>slidedown....</h1>
+    <div id="div2">click here to slidedown...</div>
+    <div id="div3">Some content here...</div><br><br>
+
+    <button id="btn2">click here</button><br><br>
+    <div id="div4">Click me to toggle a hidden secret! </div>    
+</body>
+</html>

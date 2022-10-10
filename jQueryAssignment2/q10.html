@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+    $('#btn1').click(function(){
+            $('.secret').slideUp();
+        });
+    });
+
+    </script>
+
+</head>
+<body>
+    <button id="btn1">Click me to hide the hidden secrets!</button>
+    <p class="secret">I am hidden secret #1.</p>
+    <p class="secret">I am hidden secret #2.</p>
+    <p class="secret">I am hidden secret #2.</p>
+    <p>I am <em>not</em> a hidden secret.</p>
+   
+</body>
+</html>

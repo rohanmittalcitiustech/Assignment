@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <style>
+        .ui-widget-header,
+        .ui-button,
+        .ui-state-default {
+            background-color: gray;
+            color: white;
+        }
+    </style>    
+    
+
+    <script>
+        $(document).ready(function () {
+            $('#div1').dialog({
+                autoOpen: false,
+                buttons: {
+                    'Yes I do!': function () { $(this).dialog("close"); },
+                    'NO': function () { }
+                },
+                title: "Attention!!"
+            });
+            $('#btn1').click(function () {
+                $('#div1').dialog("open");
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <div style=" height: 100px; width: 100px; background-color: rgb(184, 184, 120); padding : 20px;"><br>
+        <p><b>The Dialog Box</b></p>
+        <button id="btn1">click me!</button>
+    </div>
+
+    <div id="div1">Are you sure you want to do this?</div>
+</body>
+</html>
